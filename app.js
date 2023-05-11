@@ -2,9 +2,9 @@ const express = require('express')
 
 const app = express();
 
-app.use(json())
+app.use(express.json())
 
-app.use('/', (req, res)>{
+app.use('/', (req, res)=>{
     res.send('oya jumole ya jo looorrr baby wa joo lor')
 })
 
@@ -18,4 +18,6 @@ const start =async()=>{
     } catch (error) {
         console.log(err)
     }
-}
+} 
+
+start()
